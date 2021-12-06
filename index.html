@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- normlize lib -->
+    <link rel="stylesheet" href="css/normlize.css" />
+    <!-- Main Icon File (all.min) -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main JavaScript File -->
+    <script src="JavaScript/main.js" defer></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <!-- ============= Start City And Country Name ============= -->
+
+    <main class="main">
+      <div class="cityName">
+        <h1 id="name"></h1>
+        , <span class="countryName"></span>
+      </div>
+      <!-- ============= End City And Country Name ============= -->
+
+      <!-- ============= Start Stylling The Box of Weather Information ============= -->
+
+      <div class="weather-content">
+        <div action="" class="myform">
+          <input type="" class="search" placeholder="Search" />
+          <button class="myBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="other-content hide">
+          <div class="degree">
+            <h2 class="degree"><span></span>°C</h2>
+          </div>
+          <div class="information">
+            <img id="myImg" src="" />
+            <p>Cloud: <span class="cloud"></span></p>
+            <p class="humidity">Humidity: <span>%</span></p>
+            <p class="wind">Wind: <span>km/h</span></p>
+          </div>
+        </div>
+      </div>
+      <!-- ============= End Stylling The Box of Weather Information ============= -->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+// ================================
+//  End Global Variables
+// ================================
+
+$mainWhite: #f1f1f1;
+$mainBlack: #000;
+$blackBackground: rgba(0, 0, 0, 0.5);
+$whiteBackground: rgba(252, 252, 252, 0.6);
+$mainTransition: all 0.4s ease-in-out;
+$mainWidth: 100%;
+
+@mixin test($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin flexValues(
+  $display: flex,
+  $flexDirection,
+  $justifyContent,
+  $alignItems,
+  $textAlign
+) {
+  justify-content: $justifyContent;
+  flex-direction: $flexDirection;
+  align-items: $alignItems;
+  text-align: $textAlign;
+}
+
+@mixin gridValues(
+  $display: grid,
+  $gridTemplateColumns,
+  $gridTemplateRows,
+  $justifyContent,
+  $gap
+) {
+  grid-template-columns: $gridTemplateColumns;
+  grid-template-rows: $gridTemplateRows;
+  justify-content: $justifyContent;
+  gap: $gap;
+}
+
+// ================================
+//  End Global Variables
+// ================================
+
+.main {
+  // ================================
+  //  End Stylling The Background Image
+  // ================================
+  @include flexValues(
+    $display: flex,
+    $justifyContent: center,
+    $flexDirection: column,
+    $alignItems: center
+  );
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("https://picsum.photos/1600/900?");
+  background-size: cover;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0;
+    right: 0;
+    width: $mainWidth;
+    height: 100%;
+  }
+  // ================================
+  //  End Stylling The Background Image
+  // ================================
+  //  ================================
+  // End City And Country Name
+  //  ================================
+  .cityName {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    color: $mainWhite;
+
+    #name,
+    span {
+      font-weight: 100;
+      display: inline;
+    }
+  }
+  //  ================================
+  // End City And Country Name
+  //  ================================
+
+  //  ================================
+  //  Start Stylling The Box of Weather Information
+  //  ================================
+  .weather-content {
+    width: $mainWidth;
+    margin: 2rem;
+    max-width: 270px;
+    color: $mainWhite;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem;
+    z-index: 10;
+    border-radius: 15px;
+    .myform {
+      @include gridValues(grid, $gridTemplateColumns: 1fr auto, $gap: 10px);
+      text-align: center;
+      input {
+        padding: 0.7rem;
+        border: $whiteBackground;
+        border-radius: 50px;
+        font-size: 13px;
+        color: $blackBackground;
+        background: $whiteBackground;
+        transition: $mainTransition;
+        &:focus,
+        &:focus + .myBtn {
+          color: $mainBlack;
+          background: rgba(252, 252, 252, 0.8);
+        }
+      }
+      .myBtn {
+        background: $whiteBackground;
+        border: $whiteBackground;
+        padding: 13px;
+        border-radius: 50px;
+        color: $blackBackground;
+        transition: $mainTransition;
+        cursor: pointer;
+      }
+    }
+
+    .other-content {
+      .degree {
+        h2 {
+          font-size: 35px;
+          margin-bottom: 0;
+        }
+      }
+      .information {
+        @include gridValues($display: grid);
+        p {
+          text-transform: uppercase;
+          @include test(6px, null);
+          @include flexValues($display: flex, $justifyContent: space-between);
+        }
+      }
+    }
+  }
+
+  //  ================================
+  //  End Stylling The Box of Weather Information
+  //  ================================
+}

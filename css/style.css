@@ -1,0 +1,111 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("https://picsum.photos/1600/900?");
+  background-size: cover;
+  position: relative;
+}
+
+.main::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main .cityName {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  color: #f1f1f1;
+}
+
+.main .cityName #name, .main .cityName span {
+  font-weight: 100;
+  display: inline;
+}
+
+.main .weather-content {
+  width: 100%;
+  margin: 2rem;
+  max-width: 270px;
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1.5rem;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.main .weather-content .myform {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.main .weather-content .myform input {
+  padding: 0.7rem;
+  border: rgba(252, 252, 252, 0.6);
+  border-radius: 50px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+  background: rgba(252, 252, 252, 0.6);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.main .weather-content .myform input:focus, .main .weather-content .myform input:focus + .myBtn {
+  color: #000;
+  background: rgba(252, 252, 252, 0.8);
+}
+
+.main .weather-content .myform .myBtn {
+  background: rgba(252, 252, 252, 0.6);
+  border: rgba(252, 252, 252, 0.6);
+  padding: 13px;
+  border-radius: 50px;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.main .weather-content .other-content .degree h2 {
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.main .weather-content .other-content .information {
+  display: -ms-grid;
+  display: grid;
+}
+
+.main .weather-content .other-content .information p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
