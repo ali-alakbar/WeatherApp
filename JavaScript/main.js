@@ -9,7 +9,7 @@ const weather = {
   //  A function To Take A City Argument And Utilize In The URL
   fetchURL: async function (city) {
     const res = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
     );
     const data = await res.json();
     // Calling the Following Function
