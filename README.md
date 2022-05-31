@@ -7,5 +7,10 @@ Weather Application That's Built Using HTML, Sass/Less, JavaScript, and OpenWeat
 - Name of the city located at the top of the page
 - Forecast information easily represented in a modern futuristic box.
 
-# Technologies: HTML ● SASS ● JavaScript ● API.
-# Live: https://ali-alakbar.github.io/WeatherApp/
+# Technologies: 
+- HTML
+- SASS
+- JavaScript
+- API
+# Live: 
+- https://ali-alakbar.github.io/WeatherApp/
